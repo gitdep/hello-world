@@ -9,6 +9,6 @@ steps:
   args:
   - run
   - --filename=gs://hellotestworld/deployment.yaml
-  - --image=gcr.io/kubernetes-thao/helloword-demo:$TAG_NAME
+  - --image=gcr.io/$PROJECTNAME/helloword-demo:$TAG_NAME
   - --location=us-east1-b
   - --cluster=my-cluster
