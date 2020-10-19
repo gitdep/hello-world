@@ -8,7 +8,7 @@ steps:
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
   - run
-  - --filename=gs://hellotestworld/deployment.yaml
+  - --filename=gs://hello-world2/deployment.yaml
   - --image=gcr.io/dogwood-abbey-244909/hello-world:$TAG_NAME
   - --location=us-east1-b
   - --cluster=my-cluster
