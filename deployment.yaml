@@ -18,7 +18,7 @@ spec:
         app: helloword
     spec:
       containers:
-      - image: gcr.io/dogwood-abbey-244909/hello-world:1.1.12
+      - image: gcr.io/dogwood-abbey-244909/hello-world:1.1.13
         name: helloword-demo
         resources: {}
 status: {}
