@@ -1,14 +1,14 @@
 steps:
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/32df6306/hello-world:$TAG_NAME', '.']
+  args: ['build', '-t', 'gcr.io/dogwood-abbey-244909/hello-world:$TAG_NAME', '.']
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/32df6306/hello-world:$TAG_NAME']
+  args: ['push', 'gcr.io/dogwood-abbey-244909/hello-world:$TAG_NAME']
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
   - run
   - --filename=gs://hellotestworld/deployment.yaml
-  - --image=gcr.io/32df6306/hello-world:$TAG_NAME
+  - --image=gcr.io/dogwood-abbey-244909/hello-world:$TAG_NAME
   - --location=us-east1-b
   - --cluster=my-cluster
